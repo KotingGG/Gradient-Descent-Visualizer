@@ -3,11 +3,41 @@
 ![Python Version](https://img.shields.io/badge/python-3.13%252B-blue.svg) ![C++](https://img.shields.io/badge/C%2B%2B-17%2B-00599C.svg?logo=c%2B%2B) ![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Logistic%20Regression-orange.svg) ![License](https://img.shields.io/badge/license-MIT-yellow.svg) 
 
 ## **Overview**  
-An interactive tool for visualizing logistic regression, gradient descent, and regularization in action.  
-The computational core (loss calculation, gradients, and weight updates) is written in **C++** and wrapped as a Python module using **pybind11**.  
-The user interface and graphics are implemented in **Python** (`matplotlib`, `numpy`).  
-The application runs inside a **Docker** container, ensuring a fully reproducible environment.  
-Thanks to the C++ backend, the tool can handle datasets of **over 100K points** without performance degradation.
+- An interactive tool for visualizing logistic regression, gradient descent, and regularization in action.  
+- The computational core (loss calculation, gradients, and weight updates) is written in **C++** and wrapped as a Python module using **pybind11**.  
+- The user interface and graphics are implemented in **Python** (`matplotlib`, `numpy`).  
+- The application runs inside a **Docker** container, ensuring a fully reproducible environment.  
+- Thanks to the C++ backend, the tool can handle datasets of **over 100K points** without performance degradation.
+
+## **Quick Start**
+**Clone and set up the project:**
+```
+git clone https://github.com/KotingGG/Gradient-Descent-Visualizer.git
+cd Gradient-Descent-Visualizer
+```
+
+**Install dependencies:**
+```
+py -m venv venv
+
+venv\Scripts\activate    # Windows
+source venv/bin/activate # Linux/macOS
+```
+
+**Install the project in development mode:**
+```
+pip install -e .
+
+# (Alternatively, if only requirements.txt):
+pip install -r requirements.txt
+```
+
+**Launch an entry point:**
+```
+# TODO: to do
+```
+
+TODO: docker!
 
 ## **Folder structure:**
 ```
