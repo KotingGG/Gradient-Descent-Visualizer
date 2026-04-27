@@ -18,10 +18,13 @@ cd Gradient-Descent-Visualizer
 
 **Install dependencies:**
 ```
+# Windows
 py -m venv venv
+venv\Scripts\activate 
 
-venv\Scripts\activate    # Windows
-source venv/bin/activate # Linux/macOS
+# Linux/macOS
+python -m venv venv
+source venv/bin/activate
 ```
 
 **Install the project in development mode:**
