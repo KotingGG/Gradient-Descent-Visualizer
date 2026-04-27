@@ -2,6 +2,8 @@
 
 ![Python Version](https://img.shields.io/badge/python-3.13%252B-blue.svg) ![C++](https://img.shields.io/badge/C%2B%2B-17%2B-00599C.svg?logo=c%2B%2B) ![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Logistic%20Regression-orange.svg) ![License](https://img.shields.io/badge/license-MIT-yellow.svg) 
 
+TODO: fill out the readme
+
 ## **Overview**  
 - An interactive tool for visualizing logistic regression, gradient descent, and regularization in action.  
 - The computational core (loss calculation, gradients, and weight updates) is written in **C++** and wrapped as a Python module using **pybind11**.  
@@ -31,13 +33,13 @@ source venv/bin/activate
 ```
 pip install -e .
 
-# (Alternatively, if only requirements.txt):
+# Alternatively, if only requirements.txt:
 pip install -r requirements.txt
 ```
 
 **Launch an entry point:**
 ```
-# TODO: to do
+# TODO: add the entry point
 ```
 
 TODO: docker!
@@ -60,12 +62,17 @@ Gradient-Descent-Visualizer/
 │   └── CMakeLists.txt                    # Build C++ library and Python module
 │
 ├── python/                               
-│   ├── gdv_vis/                          
-│   │   ├── __init__.py
-│   │   ├── data_generator.py             # Synthetic dataset generation (NumPy)
-│   │   ├── visualizer.py                 # Interactive matplotlib window with sliders
-│   │   └── runner.py                     # Glue: calls C++ module and updates plots
-│   └── demo.py                           # Application entry point
+│   └── gdv_vis/                          
+│       ├── __init__.py
+│       ├── data_generator.py             # Synthetic dataset generation (NumPy)
+│       ├── visualizer.py                 # Interactive matplotlib window with sliders
+│       └── runner.py                     # Glue: calls C++ module and updates plots
+│
+├── tests/
+│   ├── cpp/
+│   │   └── main.cpp                      # Temporary C++ core test
+│   └── python/
+│       └── test_core.py                  # Test calling a module from Python
 │
 ├── configs/
 │   ├── default_dataset.yaml              # Data generation parameters (points, spread)
@@ -75,6 +82,7 @@ Gradient-Descent-Visualizer/
 │   ├── architecture.md                   # Architectural overview (C++/Python integration)
 │   └── usage.md                          # Setup and launch instructions
 │
+├── main.py                               # Application entry point
 ├── CMakeLists.txt                        # Root CMake (manages entire C++ build)
 ├── Dockerfile                            
 ├── requirements.txt                      
@@ -83,4 +91,3 @@ Gradient-Descent-Visualizer/
 └── README.md
 ```
 
-TODO: fill out the readme
