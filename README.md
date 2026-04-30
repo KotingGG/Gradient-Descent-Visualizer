@@ -48,24 +48,33 @@ TODO: docker!
 ```
 Gradient-Descent-Visualizer/
 ├── core/                                 # C++ computational core
-│   ├── include/                          
-│   │   └── gdv/                          
-│   │       ├── logistic_regression.h     # Logistic regression class
-│   │       ├── losses.h                  # Loss functions and gradients (with L1/L2)
-│   │       └── optimizers.h              # Gradient descent step
-│   ├── src/                              # C++ module implementations
-│   │   ├── logistic_regression.cpp
-│   │   ├── losses.cpp
-│   │   └── optimizers.cpp
 │   ├── bindings/                         
 │   │   └── pybind_wrapper.cpp            # Export classes and functions to Python
+│   ├── include/                          
+│   │   └── gdv/                          
+│   │       ├── losses/
+│   │       │   ├── BinaryCrossEntropy.h
+│   │       │   ├── HingeLoss.h
+│   │       │   ├── LossInterface.h
+│   │       │   └── MSELoss.h
+│   │       ├── LogisticRegression.h
+│   │       ├── Optimizers.h        
+│   │       └── SVM.h      
+│   ├── src/                              # C++ module implementations
+│   │   ├── losses/
+│   │   │   ├── BinaryCrossEntropy.cpp
+│   │   │   ├── HingeLoss.cpp
+│   │   │   └── MSELoss.cpp
+│   │   ├── LogisticRegression.cpp
+│   │   ├── Optimizers.cpp
+│   │   └── SVM.cpp
 │   └── CMakeLists.txt                    # Build C++ library and Python module
 │
 ├── python/                               
 │   └── gdv_vis/                          
 │       ├── __init__.py
-│       ├── data_generator.py             # Synthetic dataset generation (NumPy)
-│       ├── visualizer.py                 # Interactive matplotlib window with sliders
+│       ├── data_generator.py            
+│       ├── visualizer.py                 
 │       └── runner.py                     # Glue: calls C++ module and updates plots
 │
 ├── tests/
@@ -82,7 +91,7 @@ Gradient-Descent-Visualizer/
 │   ├── architecture.md                   # Architectural overview (C++/Python integration)
 │   └── usage.md                          # Setup and launch instructions
 │
-├── main.py                               # Application entry point
+├── main.py                                   # Application entry point
 ├── CMakeLists.txt                        # Root CMake (manages entire C++ build)
 ├── Dockerfile                            
 ├── requirements.txt                      
