@@ -55,19 +55,23 @@ Gradient-Descent-Visualizer/
 │   │       ├── losses/
 │   │       │   ├── BinaryCrossEntropy.h
 │   │       │   ├── HingeLoss.h
-│   │       │   ├── LossInterface.h
+│   │       │   ├── ILossFunction.h
 │   │       │   └── MSELoss.h
-│   │       ├── LogisticRegression.h
-│   │       ├── Optimizers.h        
-│   │       └── SVM.h      
+│   │       ├── models/
+│   │       │   ├── LogisticRegression.h
+│   │       │   └── SVM.h
+│   │       └── optimizers 
+│   │           └── Optimizers.h     
 │   ├── src/                              # C++ module implementations
 │   │   ├── losses/
 │   │   │   ├── BinaryCrossEntropy.cpp
 │   │   │   ├── HingeLoss.cpp
 │   │   │   └── MSELoss.cpp
-│   │   ├── LogisticRegression.cpp
-│   │   ├── Optimizers.cpp
-│   │   └── SVM.cpp
+│   │   ├── models/
+│   │   │   ├── LogisticRegression.cpp
+│   │   │   └── SVM.cpp
+│   │   └── optimizers 
+│   │       └── Optimizers.cpp
 │   └── CMakeLists.txt                    # Build C++ library and Python module
 │
 ├── python/                               
